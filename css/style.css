@@ -582,6 +582,9 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 350px; /* Increased height for portfolio items */
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio .portfolio-wrap:hover {
@@ -591,14 +594,32 @@ section {
 
 .portfolio .portfolio-wrap img {
   width: 100%;
-  height: auto;
+  height: 250px; /* Fixed height for images to fill more space */
+  object-fit: cover; /* Ensures images scale properly without distortion */
+  display: block;
 }
 
 .portfolio .portfolio-info {
   padding: 15px;
   background: #fff;
+  flex-grow: 1; /* Allows info section to take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
 }
-/* Contact Section */
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 991px) {
+  .portfolio .portfolio-wrap {
+    min-height: 300px; /* Slightly smaller height for mobile/tablet */
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 200px; /* Adjust image height for smaller screens */
+  }
+}
+
+/* Existing Contact Section (unchanged) */
 .contact ul li {
   padding: 10px 0;
   font-size: 16px;
@@ -608,7 +629,7 @@ section {
   color: #149ddd;
 }
 
-/* Footer */
+/* Existing Footer (unchanged) */
 footer {
   margin-left: 300px;
   background: #040b14;
