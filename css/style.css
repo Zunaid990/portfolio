@@ -587,6 +587,16 @@ section {
   flex-direction: column;
 }
 
+.portfolio .portfolio-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
 .portfolio .portfolio-wrap:hover {
   transform: scale(1.05);
   box-shadow: 0 0 40px rgba(20, 157, 221, 0.3);
