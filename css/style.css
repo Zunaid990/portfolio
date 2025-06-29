@@ -585,6 +585,7 @@ section {
   min-height: 350px; /* Increased height for portfolio items */
   display: flex;
   flex-direction: column;
+  
 }
 
 .portfolio .portfolio-link {
